@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <div class="top-bar con-min-width">
-    <div class="con border-gold flex">
-        <div class="border-red">
-            <a href="#"><img src="https://kakaobank.com/static/images/web/logo_black.svg" alt="로고"></a>
+    <div class="con border-gold flex height-100">
+        <div class="logo-wrap flex">
+            <a href="#" class="flex"><img src="https://kakaobank.com/static/images/web/logo_black.svg" alt="로고"></a>
         </div>
 
-        <div class="border-blue flex-grow-1"></div>
+        <div class="flex-grow-1"></div>
         
         <div class="border-red menu-box">
-            <ul>
-                <li>은행소개</li>
-                <li>IR투자정보</li>
-                <li>상품안내</li>
-                <li>고객센터</li>
+            <ul class="flex flex-al-c height-100">
+                <li><a class="flex flex-al-c height-100" href="#">은행소개</a></li>
+                <li><a href="#" class="flex flex-al-c height-100">IR투자정보</a></li>
+                <li><a href="#" class="flex flex-al-c height-100">상품안내</a></li>
+                <li><a href="#" class="flex flex-al-c height-100">고객센터</a></li>
             </ul>
         </div>
 
-        <div class="border-red">관련사이트</div>
+        <div class="border-red dropdown flex-as-c">
+            <button class="dropbtn">
+                <span>관련사이트</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+            
+            </button>
+        </div>
 
 
     </div>
@@ -58,6 +66,7 @@
     .flex{display: flex;}
     .flex-jc-c{justify-content: center;}
     .flex-al-c{align-items: center;}
+    .flex-as-c{align-self: center;}
     .flex-grow-1{flex-grow: 1;}
 
     .block{display: block;}
@@ -74,6 +83,29 @@
             width: 1080px;
         }
 
+        /* 탑바 */
+        .top-bar{
+            height: 80px;
+            background-color: antiquewhite;
+            font-size: 15px;
+        }
+        .top-bar .logo-wrap >a{
+            width: 116px;
+        }
+        .top-bar .logo-wrap >a>img{
+            width: 100%;
+        }
+
+        .dropbtn{
+        background: rgba(244, 244, 244, 0.8);
+        color: rgba(68, 68, 68, 1);
+        border: 1px solid rgba(229, 229, 229, 0.8);
+        padding: 0 14px 0 18px;
+        margin: 0 28px 0 14px;
+        height: 40px;
+        font-size: 15px; border-radius: 40px;
+        }
+        .fa-solid{font-size: 11px; display: inline-block; margin-left: 4px; transform: translateY(-2px);}
     </style>
 
 
